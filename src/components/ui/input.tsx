@@ -22,4 +22,6 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
   );
 }
 
-export { Input };
+const MemoizedInput = React.memo(Input);
+
+export { MemoizedInput };
