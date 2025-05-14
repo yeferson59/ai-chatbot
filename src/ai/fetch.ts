@@ -15,6 +15,13 @@ export const aiFetch = async ({
   const response = streamText({
     model: openrouter(modelName),
     messages: question,
+    providerOptions: {
+      openai: {
+        reasoningEffort: "high",
+      },
+    },
   });
-  return response.toDataStreamResponse();
+  return response.toDataStreamResponse({
+    sendReasoning: true,
+  });
 };
