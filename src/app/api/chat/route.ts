@@ -1,6 +1,6 @@
 import { aiFetch } from "@/ai/fetch";
 
-export const maxDuration = 30;
+export const runtime = "edge";
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
