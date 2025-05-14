@@ -55,4 +55,6 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
+const MemoizedButton = React.memo(Button);
+
+export { MemoizedButton, buttonVariants };
